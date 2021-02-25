@@ -1,0 +1,277 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Handlee", cursive;
+  font-size: 13pt;
+  background-color: #efefef;
+  padding: 10px;
+  margin: 0;
+}
+h1 {
+  font-size: 15pt;
+  color: #20bcd5;
+  text-align: center;
+  padding: 18px 0 18px 0;
+  margin: 0 0 10px 0;
+}
+h1 span {
+  border: 4px dashed #20bcd5;
+  padding: 10px;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+.img-circle {
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.section {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+#header {
+  background-image: url("https://www.sololearn.com/Uploads/header.jpg");
+  background-size: cover;
+}
+#header img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+#header p {
+  font-size: 25pt;
+  color: #3b464c;
+  padding-top: 5px;
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+.quote {
+  font-size: 12pt;
+  text-align: right;
+  margin-top: 10px;
+}
+table {
+  width: 100%;
+  font-size: 11pt;
+}
+table,
+th,
+td {
+  border: 2px solid #cecece;
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed;
+}
+.selected {
+  background-color: #f36f48;
+  font-weight: bold;
+  color: white;
+}
+li {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+progress {
+  width: 70%;
+  height: 20px;
+  color: #3fb6b2;
+  background: #efefef;
+}
+progress::-webkit-progress-bar {
+  background: #efefef;
+}
+progress::-webkit-progress-value {
+  background: #3fb6b2;
+}
+progress::-moz-progress-bar {
+  color: #3fb6b2;
+  background: #efefef;
+}
+iframe,
+audio {
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #3fb6b2;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background: #f36f48;
+}
+form {
+  text-align: center;
+  margin-top: 0;
+}
+.submit {
+  background-color: #3fb6b2;
+  padding: 12px 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  margin: 0;
+  font-weight: bold;
+}
+.submit:hover {
+  background-color: #43a09d;
+}
+textarea {
+  height: 100px;
+}
+input,
+textarea {
+  margin-bottom: 10px;
+  font-size: 11pt;
+  padding: 15px 10px 10px;
+  border: 1px solid #cecece;
+  background-color: #efefef;
+  color: #787575;
+  border-radius: 5px;
+  width: 70%;
+  outline: none;
+}
+.face {
+  transform: scale(0.4);
+  margin: 0 auto;
+  display: block;
+  margin-top: -35px;
+  margin-bottom: -25px;
+}
+#contacts img {
+  height: 50px;
+  width: 50px;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+#contacts a {
+  text-decoration: none;
+}
+#contacts img:hover {
+  opacity: 0.8;
+}
+#contacts {
+  text-align: center;
+}
+.copyright {
+  font-size: 8pt;
+  text-align: right;
+  padding-bottom: 10px;
+  color: grey;
+}
+nav ul li {
+  font-size: 17px;
+  font-family: "News Cycle";
+  display: inline-block;
+  padding: 10px;
+}
+
+.about-us a {
+  font-family: "News Cycle", serif;
+}
+
+.navbar-brand {
+  font-size: 25px;
+  font-family: "News Cycle";
+}
+
+.navbar-default {
+  background-color: #fdfffc;
+  border: 0;
+}
+
+.navbar-default .navbar-brand {
+  margin-left: 5%;
+  color: #34262b;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #fdfffc;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-text {
+  color: #210a2a;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #210a2a;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #f9f2f6;
+  background-color: transparent;
+  border-bottom: 1px solid #f9f2f6;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #f9f2f6;
+  background-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav > .disabled > a,
+.navbar-default .navbar-nav > .disabled > a:hover,
+.navbar-default .navbar-nav > .disabled > a:focus {
+  color: #f9f2f6;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #ddd;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #ddd;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+
+.navbar-inner {
+  background: rgba(0, 0, 0, 0);
+}
+header {
+  background-color: #34262b;
+  background: url(https://picjumbo.imgix.net/HNCK7769.jpg?q=40&w=1650&sharp=30)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.more-space {
+  margin-bottom: 20%;
+}
+#error-summary {
+  width: 60%;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+}

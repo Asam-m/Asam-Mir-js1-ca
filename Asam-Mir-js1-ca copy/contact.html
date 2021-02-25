@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <title>Api</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Handlee"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="header" class="section">
+      <nav class="navbar navbar-default navbar-fixed-top navbar-inner">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div
+            class="collapse navbar-collapse"
+            id="bs-example-navbar-collapse-1"
+          >
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </nav>
+    </div>
+    <div class="section">
+      <h1><span>Contact Me</span></h1>
+      <div id="error-summary"></div>
+      <form action="#" method="post" onsubmit="return validation()">
+        <input name="name" placeholder="Name" id="name" type="text" /><br />
+
+        <input name="email" placeholder="Email" id="email" type="email" /><br />
+        <input
+          name="subject"
+          placeholder="subject"
+          id="subject"
+          type="text"
+        /><br />
+        <textarea name="address" id="address" placeholder="Address"></textarea>
+        <input type="submit" value="SEND" class="submit" />
+      </form>
+    </div>
+    <div class="section" id="contacts">
+      <h1><span>Follow Me</span></h1>
+      <div>
+        <a href="https://www.sololearn.com/" target="_blank">
+          <img
+            alt="SoloLearn"
+            src="https://www.sololearn.com/Uploads/icons/sololearn.png"
+          />
+        </a>
+        <a href="http://facebook.com/iamwireless.org">
+          <img
+            alt="Facebook"
+            src="https://www.sololearn.com/Uploads/icons/facebook.png"
+          />
+        </a>
+        <a href="http://twitter.com/iamwireless">
+          <img
+            alt="Twitter"
+            src="https://www.sololearn.com/Uploads/icons/twitter.png"
+          />
+        </a>
+      </div>
+    </div>
+    <div class="copyright">&copy; 2021 All rights reserved.</div>
+  </body>
+</html>
+<script>
+  function validation() {
+    // debugger;
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var subject = document.getElementById("subject").value;
+    var address = document.getElementById("address").value;
+    var emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var errormessage = "";
+    var forward = true;
+    if (name == "" || name == null) {
+      errormessage += "<p>Name is required</p>";
+      forward = false;
+    }
+    if (!email.match(emailReg)) {
+      errormessage += "<p>Not a vald email format</p>";
+      forward = false;
+    }
+    if (subject.length < 10) {
+      errormessage += "<p>Subject Should be mnimum of 10 characters</p>";
+      forward = false;
+    }
+    if (address.length < 25) {
+      errormessage += "<p>Address Should be mnimum of 25 characters</p>";
+      forward = false;
+    }
+    if (forward) {
+      document.getElementById("error-summary").innerHTML =
+        "<h3> Form Successfully Submited";
+      document.getElementById("error-summary").style.background = "green";
+    } else {
+      document.getElementById("error-summary").innerHTML = errormessage;
+      document.getElementById("error-summary").style.background = "red";
+    }
+    return false;
+  }
+</script>

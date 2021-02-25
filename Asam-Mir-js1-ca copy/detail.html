@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <title>Api</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Handlee"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- header start -->
+    <div id="header" class="section">
+      <nav class="navbar navbar-default navbar-fixed-top navbar-inner">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div
+            class="collapse navbar-collapse"
+            id="bs-example-navbar-collapse-1"
+          >
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </nav>
+    </div>
+
+    <div class="section">
+      <h1><span>Datq of Makeup </span></h1>
+      <table id="tblProducts">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Brand</th>
+          <th>Pirce</th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Colors</th>
+        </tr>
+      </table>
+      <div id="error-message"></div>
+    </div>
+
+    <div class="section" id="contacts">
+      <h1><span>Follow Me</span></h1>
+      <div>
+        <a href="https://www.sololearn.com/" target="_blank">
+          <img
+            alt="SoloLearn"
+            src="https://www.sololearn.com/Uploads/icons/sololearn.png"
+          />
+        </a>
+        <a href="http://facebook.com/iamwireless.org">
+          <img
+            alt="Facebook"
+            src="https://www.sololearn.com/Uploads/icons/facebook.png"
+          />
+        </a>
+        <a href="http://twitter.com/iamwireless">
+          <img
+            alt="Twitter"
+            src="https://www.sololearn.com/Uploads/icons/twitter.png"
+          />
+        </a>
+      </div>
+    </div>
+    <div class="copyright">&copy; 2021 All rights reserved.</div>
+  </body>
+</html>
+<script>
+  var xhttp = new XMLHttpRequest();
+  // var id='';
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      // Typical action to be performed when the document is ready:
+      var response = xhttp.responseText;
+      var data = JSON.parse(response);
+      var template = "";
+
+      template += "<tr><td>" + data.id + "</td>";
+      template += "<td>" + data.name + "</td>";
+      template += "<td>" + data.brand + "</td>";
+      template += "<td>" + data.price_sign + "" + data.price + "</td>";
+      template += "<td>" + data.category + "</td>";
+      template += "<td>" + data.description + "</td><td>";
+      for (var c in data.product_colors) {
+        template +=
+          '<span style="background-color:' +
+          data.product_colors[c].hex_value +
+          '">Shade</span><br>';
+      }
+      template += "</td></tr>";
+
+      document.getElementById("tblProducts").innerHTML += template;
+      // return;
+    }
+  };
+  const params = new URLSearchParams(location.search);
+  const id = params.get("id");
+  xhttp.open(
+    "GET",
+    "http://makeup-api.herokuapp.com/api/v1/products/" + id + ".json",
+    true
+  );
+  xhttp.send();
+</script>
